@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Button } from '@mui/material';
+import { motion } from 'framer-motion';
 import Button from '../common/button';
 import TemporaryDrawer from './drawer';
 import ThemeToggle from '../common/ThemeToggle';
