@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from '@mui/material';
+// import { Button } from '@mui/material';
+import Button from '../common/button';
 import TemporaryDrawer from './drawer';
 import ThemeToggle from '../common/ThemeToggle';
 
@@ -16,22 +17,23 @@ function Header() {
           {/* text-xs md:text-sm lg:text-base
 text-xs md:text-sm lg:text-base
 text-xs md:text-sm lg:text-base */}
-          <p className=" font-semibold text-greyClr cursor-pointer hover:text-white transition duration-300">
+          <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
             Home
           </p>
         </a>
         <a href="/compare">
-          <p className=" font-semibold text-greyClr cursor-pointer hover:text-white transition duration-300">
+          <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
             Compare
           </p>
         </a>
         <a href="/watchlist">
-          <p className=" font-semibold text-greyClr cursor-pointer hover:text-white transition duration-300">
+          <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
             Watchlist
           </p>
         </a>
         <a href="/dashboard">
-          <Button variant="contained">Dashboard</Button>
+          {/* <Button variant="contained">Dashboard</Button> */}
+          <Button text={'Dashboard'} />
         </a>
         <ThemeToggle />
       </div>

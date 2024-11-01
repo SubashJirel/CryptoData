@@ -1,0 +1,6 @@
+.heading1:hover {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: var(--text-color);
+  color: var(--bg-color);
+  transition: all 0.3s;
+}
