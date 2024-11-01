@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../common/button';
 import TemporaryDrawer from './drawer';
@@ -14,28 +15,28 @@ function Header() {
       </h1>
 
       <div className="links hidden md:flex items-center gap-4">
-        <a href="/">
+        <Link to="/">
           {/* text-xs md:text-sm lg:text-base
 text-xs md:text-sm lg:text-base
 text-xs md:text-sm lg:text-base */}
           <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
             Home
           </p>
-        </a>
-        <a href="/compare">
+        </Link>
+        <Link to="/compare">
           <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
             Compare
           </p>
-        </a>
-        <a href="/watchlist">
+        </Link>
+        <Link to="/watchlist">
           <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
             Watchlist
           </p>
-        </a>
-        <a href="/dashboard">
+        </Link>
+        <Link to="/dashboard">
           {/* <Button variant="contained">Dashboard</Button> */}
           <Button text={'Dashboard'} />
-        </a>
+        </Link>
         <ThemeToggle />
       </div>
       <div className="drawer-component block md:hidden">

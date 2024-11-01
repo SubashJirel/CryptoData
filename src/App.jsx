@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import Button from '@mui/material/Button';
 import Home from './pages/Home';
+import Header from './components/header';
+import WatchList from './pages/WatchList';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,7 +34,14 @@ function App() {
 
   return (
     <>
-      <Home />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/watchlist" element={<WatchList />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
     </>
   );
 }

@@ -5,7 +5,6 @@ import MainComponent from '../components/landingPage/MainComponent';
 function Home() {
   return (
     <>
-      <Header />
       <MainComponent />
     </>
   );
