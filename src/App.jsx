@@ -30,7 +30,7 @@ function App() {
       }
     }
     fetchData();
-  }, [count]);
+  }, []);
 
   return (
     <>

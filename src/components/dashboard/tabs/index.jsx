@@ -4,8 +4,9 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import Grid from '../grid';
 
-export default function TabsComponent() {
+export default function TabsComponent({ data }) {
   const [value, setValue] = React.useState('grid');
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -19,6 +20,7 @@ export default function TabsComponent() {
     fontWeight: 600,
     textTransform: 'capitalize',
   };
+  console.log('tabsComponent data props>>>', data);
   return (
     <TabContext value={value}>
       <div style={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -27,8 +29,21 @@ export default function TabsComponent() {
           <Tab label="List" value="list" sx={style} />
         </TabList>
       </div>
-      <TabPanel value="grid">Mapping for grids</TabPanel>
-      <TabPanel value="list">mapping for list</TabPanel>
+      <TabPanel value="grid">
+        <div className="flex justify-center items-start flex-wrap w-full gap-4">
+          {data && data.map((coin, i) => <Grid coin={coin} key={i} />)}
+        </div>
+      </TabPanel>
+      <TabPanel value="list">
+        {data &&
+          data.map((item) => (
+            <div key={item.id}>
+              <p>{item.name}</p>
+              <img src={item.image} alt="" />
+            </div>
+          ))}
+        list
+      </TabPanel>
     </TabContext>
   );
 }

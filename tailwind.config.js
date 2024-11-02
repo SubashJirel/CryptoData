@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         backgroundClr: 'var(--bg-color)',
+        backgroundClrCard: 'var(--bg-color-card)',
         textClr: 'var(--text-color)',
         primary: 'var(--primary-color)',
         blueClr: 'var(--blue)',

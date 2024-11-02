@@ -37,12 +37,14 @@
   --darkgrey: #1b1b1b;
   --green: #61c96f;
   --red: #f94141;
+  --bg-color-card: #f3f3f3;
 }
 
 [data-theme='dark'] {
   --bg-color: #1a202c;
   --text-color: #ffffff;
   --primary-color: #4299e1;
+  --bg-color-card: #1b1b1b;
 }
 
 body {
