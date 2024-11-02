@@ -16,6 +16,9 @@ export default {
         redClr: 'var(--red)',
       },
     },
+    screens: {
+      vsm: '380px',
+    },
   },
   plugins: [],
 };

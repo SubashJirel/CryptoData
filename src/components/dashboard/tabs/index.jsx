@@ -5,6 +5,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Grid from '../grid';
+import List from '../list';
 
 export default function TabsComponent({ data }) {
   const [value, setValue] = React.useState('grid');
@@ -20,6 +21,7 @@ export default function TabsComponent({ data }) {
     fontWeight: 600,
     textTransform: 'capitalize',
   };
+  const styleList = {};
   console.log('tabsComponent data props>>>', data);
   return (
     <TabContext value={value}>
@@ -34,15 +36,10 @@ export default function TabsComponent({ data }) {
           {data && data.map((coin, i) => <Grid coin={coin} key={i} />)}
         </div>
       </TabPanel>
-      <TabPanel value="list">
-        {data &&
-          data.map((item) => (
-            <div key={item.id}>
-              <p>{item.name}</p>
-              <img src={item.image} alt="" />
-            </div>
-          ))}
-        list
+      <TabPanel sx={styleList} value="list">
+        <table className="mx-auto w-full sm:w-11/12 block">
+          {data && data.map((coin, i) => <List coin={coin} key={i} />)}
+        </table>
       </TabPanel>
     </TabContext>
   );
