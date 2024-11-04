@@ -5,6 +5,7 @@ import TabsComponent from '../components/dashboard/tabs';
 import { useDataFetch } from '../hooks/useFetchData';
 import Search from '../components/dashboard/search';
 import PaginationControlled from '../components/dashboard/Pagination';
+import Loader from '../components/common/Loader';
 
 function Dashboard() {
   const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd';
@@ -23,7 +24,7 @@ function Dashboard() {
   }, [data]);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <Loader />;
   }
 
   if (isError) {

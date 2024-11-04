@@ -5,7 +5,7 @@ import { Tooltip } from '@mui/material';
 import { convertNumber } from '../../../functions/convertNumber';
 
 function List({ coin }) {
-  const isNegative = coin.price_change_percentage_24h < 0;
+  const isNegative = coin?.price_change_percentage_24h < 0;
 
   return (
     <tr
@@ -15,8 +15,8 @@ function List({ coin }) {
       <Tooltip title="Coin Image">
         <td className="flex-shrink-0 w-1/5 text-center md:text-left">
           <img
-            src={coin.image}
-            alt={coin.name}
+            src={coin?.image}
+            alt={coin?.name}
             className="h-12 w-12 rounded-full"
           />
         </td>
@@ -25,10 +25,10 @@ function List({ coin }) {
       <Tooltip title="Coin Info" placement="bottom-start">
         <td className="w-1/5 flex flex-col gap-1 text-center md:text-left">
           <p className="uppercase font-semibold text-textClr text-xs sm:text-sm md:text-base lg:text-lg ">
-            {coin.symbol}
+            {coin?.symbol}
           </p>
           <p className="text-greyClr text-xs sm:text-sm md:text-base lg:text-lg ">
-            {coin.name}
+            {coin?.name}
           </p>
         </td>
       </Tooltip>
@@ -49,7 +49,7 @@ function List({ coin }) {
                           isNegative ? 'redClr' : 'greenClr'
                         } hover:text-white transition-all duration-300`}
           >
-            {coin.price_change_percentage_24h.toFixed(2)}%
+            {coin?.price_change_percentage_24h?.toFixed(2)}%
           </div>
           <div
             className={`p-1 rounded-full  justify-center items-center hidden md:flex
@@ -77,24 +77,24 @@ function List({ coin }) {
             isNegative ? 'text-redClr' : 'text-greenClr'
           } `}
         >
-          ${coin.current_price.toLocaleString()}
+          ${coin?.current_price?.toLocaleString()}
         </td>
       </Tooltip>
 
       <Tooltip title="Coin Total Volume" placement="bottom-end">
         <td className="w-1/5 text-right text-greyClr text-xs sm:text-sm md:text-base lg:text-lg hidden lg:table-cell ">
-          {coin.total_volume.toLocaleString()}
+          {coin?.total_volume?.toLocaleString()}
         </td>
       </Tooltip>
 
       <Tooltip title="Coin Market Capital" placement="bottom-end">
         <td className="w-1/5 text-right text-greyClr text-xs sm:text-sm md:text-base lg:text-lg hidden lg:table-cell ">
-          ${coin.market_cap.toLocaleString()}
+          ${coin?.market_cap?.toLocaleString()}
         </td>
       </Tooltip>
 
       <td className="text-greyClr text-xs sm:text-sm md:text-base lg:text-lg text-left lg:hidden ">
-        ${convertNumber(coin.market_cap)}
+        ${convertNumber(coin?.market_cap)}
       </td>
     </tr>
   );
