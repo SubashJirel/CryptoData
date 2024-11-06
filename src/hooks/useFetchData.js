@@ -55,7 +55,7 @@ export function useDataFetch(url) {
       dispatch({ type: ACTIONS.FETCH_INIT });
 
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

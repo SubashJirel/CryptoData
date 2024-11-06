@@ -9,18 +9,18 @@ import Loader from '../components/common/Loader';
 
 function Dashboard() {
   const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd';
+  const url2 = 'http://localhost:3000/api/coins';
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const [paginatedCoins, setPaginatedCoins] = useState([]);
   const itemsPerPage = 10;
 
-  const [{ data, isLoading, isError }] = useDataFetch(url);
+  const [{ data, isLoading, isError }] = useDataFetch(url2);
   useEffect(() => {
     if (data) {
       // Set initial paginated coins for page 1
       setPaginatedCoins(data.slice(0, itemsPerPage));
     }
-    console.log('fo und pagiii', paginatedCoins);
   }, [data]);
 
   if (isLoading) {
@@ -28,7 +28,7 @@ function Dashboard() {
   }
 
   if (isError) {
-    return <h1>Error fetching data. {data}</h1>;
+    return <h1>Error fetching data. </h1>;
   }
   const handleChange = (e) => {
     setSearch(e.target.value);
