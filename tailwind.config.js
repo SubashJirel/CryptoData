@@ -10,6 +10,7 @@ export default {
         textClr: 'var(--text-color)',
         primary: 'var(--primary-color)',
         blueClr: 'var(--blue)',
+        blueBg: 'var(--blue-background)',
         greyClr: 'var(--grey)',
         darkGreyClr: 'var(--darkgrey)',
         greenClr: 'var(--green)',

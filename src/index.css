@@ -33,6 +33,7 @@
   --text-color: #111;
   --primary-color: #007bff;
   --blue: #3a80e9;
+  --blue-background: #e2eefe;
   --grey: #888;
   --darkgrey: #1b1b1b;
   --green: #61c96f;
@@ -45,6 +46,7 @@
   --text-color: #ffffff;
   --primary-color: #4299e1;
   --bg-color-card: #1b1b1b;
+  --blue-background: #4299e1;
 }
 
 body {

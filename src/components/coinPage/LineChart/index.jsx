@@ -9,6 +9,7 @@ function LineChart({ chartData }) {
       },
     },
     responsive: true,
+    maintainAspectRatio: false,
     interaction: {
       mode: 'index',
       intersect: false,
