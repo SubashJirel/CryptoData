@@ -1,9 +1,9 @@
 import React from 'react';
 // import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import Button from '../common/button';
-import TemporaryDrawer from './drawer';
+// import Button from '../common/button';
+import Button from '../common/Button';
+import TemporaryDrawer from './Drawer';
 import ThemeToggle from '../common/ThemeToggle';
 
 function Header() {

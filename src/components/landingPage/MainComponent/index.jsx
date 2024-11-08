@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../Common/Button';
+import Button from '../../common/button';
 import gradient from '../../../assets/gradient.png';
 import iphone from '../../../assets/iphone.png';
 import { motion } from 'framer-motion';
