@@ -6,7 +6,8 @@ import { convertNumber } from '../../../functions/convertNumber';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { saveItemToWatchlist } from '../../../functions/saveItemToWatchlist';
-import { removeItemToWatchlist } from '../../../../../crypto-dashboard-jan/src/functions/removeItemToWatchlist';
+import { removeItemToWatchlist } from '../../../functions/removeItemToWatchlist';
+
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
 import StarIcon from '@mui/icons-material/Star';

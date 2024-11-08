@@ -1,6 +1,3 @@
-// import { toast } from "react-toastify";
-import { toast } from 'react-toastify';
-
 export const saveItemToWatchlist = (e, id) => {
   e.preventDefault();
   let watchlist = JSON.parse(localStorage.getItem('watchlist'));

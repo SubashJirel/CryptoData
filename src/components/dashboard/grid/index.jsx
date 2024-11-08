@@ -5,9 +5,9 @@ import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 
 import { Link } from 'react-router-dom';
 
-import 'react-toastify/dist/ReactToastify.css';
 import { saveItemToWatchlist } from '../../../functions/saveItemToWatchlist';
-import { removeItemToWatchlist } from '../../../../../crypto-dashboard-jan/src/functions/removeItemToWatchlist';
+import { removeItemToWatchlist } from '../../../functions/removeItemToWatchlist';
+
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
 import StarIcon from '@mui/icons-material/Star';
