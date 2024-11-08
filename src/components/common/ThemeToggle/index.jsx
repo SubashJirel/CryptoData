@@ -1,3 +1,4 @@
+import { Switch } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 function ThemeToggle() {
@@ -14,9 +15,9 @@ function ThemeToggle() {
   };
 
   return (
-    <button onClick={toggleTheme} className="p-2 rounded bg-primary text-text">
-      Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode
-    </button>
+    <>
+      <Switch checked={theme === 'dark'} onClick={toggleTheme} />
+    </>
   );
 }
 

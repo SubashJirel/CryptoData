@@ -23,11 +23,7 @@ text-xs md:text-sm lg:text-base */}
             Home
           </p>
         </Link>
-        <Link to="/compare">
-          <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
-            Compare
-          </p>
-        </Link>
+
         <Link to="/watchlist">
           <p className=" font-semibold text-greyClr cursor-pointer hover:text-textClr transition duration-300">
             Watchlist

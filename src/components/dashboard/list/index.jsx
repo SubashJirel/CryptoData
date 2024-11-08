@@ -4,14 +4,34 @@ import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import { Tooltip } from '@mui/material';
 import { convertNumber } from '../../../functions/convertNumber';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { saveItemToWatchlist } from '../../../functions/saveItemToWatchlist';
+import { removeItemToWatchlist } from '../../../../../crypto-dashboard-jan/src/functions/removeItemToWatchlist';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
+import StarIcon from '@mui/icons-material/Star';
 function List({ coin }) {
   const isNegative = coin?.price_change_percentage_24h < 0;
+  const watchlist = JSON.parse(localStorage.getItem('watchlist'));
+  const [isCoinAdded, setIsCoinAdded] = useState(watchlist?.includes(coin.id));
+  const iconStyles = {
+    color: '#E0B827',
+    fontSize: {
+      xs: '1rem', // small size for extra-small screens
+      sm: '1.15rem', // medium size for small screens
+      md: '1.35rem', // larger size for medium screens
+      lg: '1.5rem', // even larger size for large screens
+    },
+    '&:hover': {
+      transform: 'scale(1.2)',
+    },
+    transition: 'all 0.3s ease',
+  };
 
   return (
     <Link to={`/coin/${coin?.id}`}>
       <tr
-        className="w-full px-4 py-3 mb-2 mx-auto flex justify-between items-center rounded-lg cursor-pointer
+        className="w-full px-4 py-3 mb-2 mx-auto flex justify-start items-center rounded-lg cursor-pointer
                  hover:bg-backgroundClrCard transition-all duration-300"
       >
         <Tooltip title="Coin Image">
@@ -34,7 +54,29 @@ function List({ coin }) {
             </p>
           </td>
         </Tooltip>
+        <Tooltip title="WatchList">
+          <div
+            className={`watchlist-icon ${
+              coin.price_change_percentage_24h < 0 && 'watchlist-icon-red'
+            }`}
+            onClick={(e) => {
+              if (isCoinAdded) {
+                // remove coin
 
+                removeItemToWatchlist(e, coin.id, setIsCoinAdded);
+              } else {
+                setIsCoinAdded(true);
+                saveItemToWatchlist(e, coin.id);
+              }
+            }}
+          >
+            {isCoinAdded ? (
+              <StarIcon sx={iconStyles} />
+            ) : (
+              <StarOutlineIcon sx={iconStyles} />
+            )}
+          </div>
+        </Tooltip>
         <Tooltip
           title="Coin Price Percentage change In 24hrs"
           placement="bottom-start"

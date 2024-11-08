@@ -11,7 +11,7 @@ export default function PaginationControlled({
       <Pagination
         sx={{
           '& .MuiPaginationItem-text': {
-            color: '#fff !important',
+            color: 'var(--text-color)!important',
             border: '1px solid var(--grey)',
           },
           '& .MuiPaginationItem-text:hover': {

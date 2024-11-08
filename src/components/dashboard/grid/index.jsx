@@ -16,6 +16,19 @@ function Grid({ coin }) {
 
   const watchlist = JSON.parse(localStorage.getItem('watchlist'));
   const [isCoinAdded, setIsCoinAdded] = useState(watchlist?.includes(coin.id));
+  const iconStyles = {
+    color: '#E0B827',
+    fontSize: {
+      xs: '1rem', // small size for extra-small screens
+      sm: '1.15rem', // medium size for small screens
+      md: '1.35rem', // larger size for medium screens
+      lg: '1.5rem', // even larger size for large screens
+    },
+    '&:hover': {
+      transform: 'scale(1.2)',
+    },
+    transition: 'all 0.3s ease',
+  };
   return (
     <>
       <Link to={`/coin/${coin?.id}`}>
@@ -54,7 +67,11 @@ function Grid({ coin }) {
                 }
               }}
             >
-              {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
+              {isCoinAdded ? (
+                <StarIcon sx={iconStyles} />
+              ) : (
+                <StarOutlineIcon sx={iconStyles} />
+              )}
             </div>
           </div>
 

@@ -44,6 +44,11 @@ function Dashboard() {
     setPage(value);
     const start = (value - 1) * itemsPerPage;
     setPaginatedCoins(data.slice(start, start + itemsPerPage));
+    // Scroll to the top smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
   var filteredCoins = data?.filter(
     (coin) =>
