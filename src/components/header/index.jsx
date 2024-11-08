@@ -1,8 +1,7 @@
 import React from 'react';
 // import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-// import Button from '../common/button';
-import Button from '../common/Button';
+import Button from '../common/button';
 import TemporaryDrawer from './Drawer';
 import ThemeToggle from '../common/ThemeToggle';
 
