@@ -60,7 +60,7 @@ function Coin() {
                   : 'hover:bg-blueBg hover:border-b-2 border-textClr'
               }`}
             >
-              Market Caps
+              Market Cap
             </div>
             <div
               onClick={() => setSelectedDataType('total_volumes')}
