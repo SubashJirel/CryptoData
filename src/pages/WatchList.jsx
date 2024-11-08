@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Button from '../components/common/button';
 import { useDataFetch } from '../hooks/useFetchData';
 import { Link } from 'react-router-dom';
-import TabsComponent from '../components/Dashboard/tabs';
+import TabsComponent from '../components/dashboard/tabs';
 import Loader from '../components/common/Loader';
 
 function Watchlist() {
