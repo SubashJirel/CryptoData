@@ -16,7 +16,7 @@ import SelectDays from '../components/coinPage/SelectDays';
 function Coin() {
   const { id } = useParams();
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
-  const url2 = `http://localhost:3000/api/coins/${id}`;
+  const url2 = `https://proxyservercrypto.up.railway.app/api/coins/${id}`;
   const [{ data, isLoading, isError }] = useDataFetch(url2);
   const [coin, setCoin] = useState({});
   const [day, setDay] = useState(30);

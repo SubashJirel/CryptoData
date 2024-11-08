@@ -13,12 +13,12 @@ function Watchlist() {
   );
   const [coins, setCoins] = useState([]);
   const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd';
-  const url2 = 'http://localhost:3000/api/coins';
+  const url2 = 'https://proxyservercrypto.up.railway.app/api/coins';
 
   const [{ data, isLoading, isError }] = useDataFetch(url2);
   useEffect(() => {
     if (data) {
-      setCoins(data.filter((coin) => watchlist.includes(coin.id)));
+      setCoins(data?.filter((coin) => watchlist.includes(coin.id)));
     }
   }, [data, watchlist]);
 

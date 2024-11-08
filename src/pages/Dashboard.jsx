@@ -9,7 +9,7 @@ import Loader from '../components/common/Loader';
 
 function Dashboard() {
   const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd';
-  const url2 = 'http://localhost:3000/api/coins';
+  const url2 = 'https://proxyservercrypto.up.railway.app/api/coins';
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const [paginatedCoins, setPaginatedCoins] = useState([]);

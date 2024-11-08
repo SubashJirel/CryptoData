@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
+
 import { Link } from 'react-router-dom';
 
 import 'react-toastify/dist/ReactToastify.css';

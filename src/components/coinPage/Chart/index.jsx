@@ -8,7 +8,7 @@ import { settingChartData } from '../../../functions/settingChartData';
 
 function ChartData({ coinName, id, day, setDay, selectedDataType }) {
   const url = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${day}`;
-  const url2 = `http://localhost:3000/api/coins/market_chart/${id}?days=${day}`;
+  const url2 = `https://proxyservercrypto.up.railway.app/api/coins/market_chart/${id}?days=${day}`;
   // const url =
   //   'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=20';
   const [{ data, isLoading, isError }] = useDataFetch(url2, day);
